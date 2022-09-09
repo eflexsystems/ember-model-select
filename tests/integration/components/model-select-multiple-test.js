@@ -89,7 +89,7 @@ module('Integration | Component | model-select-multiple', function (hooks) {
 
     await removeMultipleOption(
       '.ember-model-select-multiple-trigger',
-      this.selected[0].get('name')
+      this.selected[0].name
     );
 
     assert.strictEqual(this.selected.length, 1, 'one option has been selected');
