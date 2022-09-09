@@ -33,11 +33,22 @@
     @onKeydown={{@onKeydown}}
     @onOpen={{this.onOpen}}
     @options={{this._options}}
-    @optionsComponent={{component
-      this.optionsComponent
-      infiniteScroll=this.infiniteScroll
-      infiniteModel=this.model
-      withCreate=this.withCreate}}
+    @optionsComponent={{
+      if
+      @optionsComponent
+      (component
+        (ensure-safe-component @optionsComponent)
+        infiniteScroll=this.infiniteScroll
+        infiniteModel=this.model
+        withCreate=this.withCreate
+      )
+      (component
+        "model-select/options"
+        infiniteScroll=this.infiniteScroll
+        infiniteModel=this.model
+        withCreate=this.withCreate
+      )
+    }}
     @placeholder={{@placeholder}}
     @placeholderComponent={{@placeholderComponent}}
     @preventScroll={{@preventScroll}}

@@ -193,19 +193,6 @@ export default class ModelSelectComponent extends Component {
   }
 
   /**
-   * Ember-power-select-option.
-   *
-   * See: https://ember-power-select.com/docs/api-reference/
-   *
-   * @argument optionsComponent
-   * @type {Component}
-   * @default 'model-select/options'
-   */
-  get optionsComponent() {
-    return this.args.optionsComponent || 'model-select/options';
-  }
-
-  /**
    * Called upon creation of new entry.
    *
    * @argument onCreate
